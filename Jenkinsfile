@@ -3,13 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout Code') {
-            steps {
-                git branch: 'main',
-                    url: 'https://github.com/USERNAME/REPO_NAME.git'
-            }
-        }
-
         stage('Install Dependencies') {
             steps {
                 sh 'npm install'
